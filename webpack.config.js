@@ -57,10 +57,11 @@ module.exports = [
       // clear out build directories on each build
       new CleanWebpackPlugin({
         cleanOnceBeforeBuildPatterns: [
-          'site/templates/js/*',
-          'site/templates/css/main.min.*.css',
-          'site/templates/css/main.min.*.css.map',
-          'site/templates/components/*',
+            'site/templates/js/main.min.*.js',
+            'site/templates/js/main.min.*.js.map',
+            'site/templates/css/main.min.*.css',
+            'site/templates/css/main.min.*.css.map',
+            'site/templates/components/*',
         ]
       }),
       new CopyWebpackPlugin({

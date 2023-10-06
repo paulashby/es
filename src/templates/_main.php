@@ -23,10 +23,15 @@ $home = $pages->get('/'); /** @var HomePage $home */
 	</head>
 	<body id="html-body">
         <main data-pw-id="main-region">
-            <h1 id="headline">
-                <?= $title ?>
-            </h1>
+            <header>
+                <h1 id="headline">
+                    <?= $title ?>
+                </h1>
+            </header>
 		</main>
+        <footer>
+            <p>&copy; Esme Ashby, <?= $year ?></p>
+        </footer>
         <script src="<?= $js_url ?>"></script>
 	</body>
 </html>
