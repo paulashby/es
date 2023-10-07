@@ -9,11 +9,8 @@ if (count($image_entries)) {
 ?>
 
 <main data-pw-id="main-region">
-
-    <header>
-        <h1 id="headline">
-            <?= $title ?>
-        </h1>
-    </header>
+    <h1 id="headline">
+        <?= $title ?>
+    </h1>
     <?= $gallery ?>
 </main>	
