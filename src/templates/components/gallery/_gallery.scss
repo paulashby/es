@@ -51,4 +51,15 @@
             }
         }
     }
+    
+    @media only screen and (min-width: 1500px) {
+        .image-entry {
+            &.landscape {
+                height: 750px;
+            }
+            &.portrait {
+                height: 1065px;
+            }
+        }
+    }
 }
