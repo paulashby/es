@@ -32,7 +32,7 @@ $home = $pages->get('/'); /** @var HomePage $home */
                     </h1>
                 </main>
                 <footer>
-                    <p>&copy; Esme Ashby, <?= $year ?></p>
+                    <p>&copy; Esme Ashby <?= $year ?></p>
                 </footer>
             </div>
         </section>
