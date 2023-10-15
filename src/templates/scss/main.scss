@@ -90,8 +90,10 @@ main {
     padding: 0 $gap;
 
     .contact & {
-        max-width: 40rem;
+        box-sizing: border-box;
         margin: 0 auto;
+        max-width: 35rem;        
+        width: 95vw;
     }
 
     h1 {
@@ -109,6 +111,7 @@ main {
         }
 
         & + p {
+            font-size: 0.9rem;
             margin-bottom: 1.5rem;
         }
     }
@@ -120,15 +123,30 @@ main {
         margin-bottom: 0.3rem;
     }
 
+    .requiredHint {
+        display: none;
+    }
+    
+    .alert,
+    .error {
+        color: #b75b5b;
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+
     form {
         display: flex;
         flex-direction: column;
         position: relative;
 
-        label:not(.consent-label) {
+        label:not(#contact-accept-inputwrapper label) {
             @extend %screen-reader-text;
         }
 
+        #contact-accept-inputwrapper label {
+            font-size: 0.75rem;
+        }
+        
         .consent-fields {
             display: flex;
 
@@ -143,34 +161,44 @@ main {
         }
 
         input[type=text],
-        textarea {
+        textarea,
+        #contact-email {
             box-sizing: border-box;
+            font-family: sans-serif;
             margin: 0.35rem 0;
             padding: 0.75rem;
             width: 100%;
+            font-size: 0.925rem;
         }
 
         textarea {
             resize: vertical;
         }
 
-        input[type=submit] {
-            bottom: -2.8rem;
+        #contact-submit {
             margin: 0.35rem 0;
             padding: 0.4rem 0.6rem;
-            position: absolute;
-            right: 0;
             width: fit-content;
         }
     }
+
 }
 
 footer {
     padding: 1.5rem 0.5rem 2rem;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.65rem;
 }
 
-@media only screen and (min-width: 440px) {
+@media only screen and (min-width: 400px) {
+    .contact main {
+        width: 80vw;
+    }
 
+}
+
+@media only screen and (min-width: 650px) {
+    .contact main {
+        width: 50vw;
+    }
 }
