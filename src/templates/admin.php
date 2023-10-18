@@ -15,4 +15,4 @@
  */
 
 /** @var Config $config */
-require($config->paths->core . "admin.php"); 
+require($config->paths->core . "admin.php");

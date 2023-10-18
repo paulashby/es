@@ -1,6 +1,6 @@
 <?php namespace ProcessWire;
 
-$image_entries = $page->children("template=image-entry");
+$image_entries = $pages->get("template=gallery")->children;
 $gallery = "";
 if (count($image_entries)) {
     $gallery = $files->render("components/gallery/index.php", ["entries" => $image_entries]);

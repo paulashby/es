@@ -1,0 +1,56 @@
+.image-entry {
+    flex: 100%;
+    height: 48.2vw;
+    margin: $gap-half 0;
+    min-width: 0;
+    overflow: hidden;
+    position: relative;
+
+    &.art-directed,
+    &.portrait {
+        height: 137.5vw;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        color: #fff;
+        opacity: 0;
+        letter-spacing: 0.005rem;
+        padding: 0.5rem;
+        position: absolute;
+        text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+        top: 1.6rem;
+        left: 1rem;
+
+        transition: all 0.5s ease-out;
+    }
+
+    &:hover figcaption {
+        opacity: 1;
+        top: 0.8rem;
+    }
+
+    @media only screen and (min-width: 750px) {
+        height: 49.5vw;
+
+        &.art-directed {
+            height: 49.5vw;
+        }
+        &.portrait {
+            flex: 0 1 calc(50% - $gap-half);
+            height: 69.3vw;
+        }
+    }
+    
+    @media only screen and (min-width: 1500px) {
+        &.landscape {
+            height: 750px;
+        }
+        &.portrait {
+            height: 1063px;
+        }
+    }
+}
