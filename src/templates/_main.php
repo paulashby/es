@@ -33,6 +33,7 @@ $home = $pages->get('/'); /** @var HomePage $home */
                 </main>
                 <footer>
                     <p><?= $copyright ?></p>
+                    <div class="insta-link"><a href="http://instagram.com/eddie.sews" target="_blank"><span class="link-text">Instagram</span></a></div>
                 </footer>
             </div>
         </section>
