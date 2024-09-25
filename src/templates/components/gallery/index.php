@@ -9,7 +9,7 @@ foreach ($entries as $item) {
     $figure_markup = "<figure class='image-entry {$image_details['aspect_class']}'>
         {$image_details['mark_up']}
         <figcaption>
-            <h2 class='caption-title'>{$image_details['title']}</h2>{$image_details['dsc']}
+            <h2 class='caption-title'>{$item["project_name"]}</h2>{$item["project_description"]}
         </figcaption>
     </figure>";
 
@@ -32,4 +32,3 @@ foreach ($entries as $item) {
     <?= $gallery_items ?>
 </div>
 
-	

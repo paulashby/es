@@ -5,7 +5,6 @@ function getImageMarkup($item) {
     $image = $is_portrait ? $item->portrait_image : $item->image;
     $img_out = [
         "title" => $item->title,
-        "dsc" => $image->description,
         "is_portrait" => $is_portrait,
         "aspect_class" => $is_portrait ? "portrait" : "landscape"
     ];
@@ -17,11 +16,10 @@ function getImageMarkup($item) {
         "lazy_load" => true,
         "webp" => true
     ];
-    
-    $dsc = $image->description;
-    $img_options["alt_str"] = $img_out["dsc"] ? $dsc : "Example of costume by Es";
+
+    $img_options["alt_str"] = $image->description ?? "Example of costume by Es";
     $art_directed = $item->art_directed_image;
-    
+
     if ($art_directed) {
         $img_out["aspect_class"] .= " art-directed";
 
@@ -52,7 +50,7 @@ function getImageMarkup($item) {
 
     // Get the picture element for this image
     $lazyImages = wire("modules")->get("LazyResponsiveImages");
-    $img_out["mark_up"] = $lazyImages->renderImage($img_options);  
+    $img_out["mark_up"] = $lazyImages->renderImage($img_options);
 
     return $img_out;
 }
